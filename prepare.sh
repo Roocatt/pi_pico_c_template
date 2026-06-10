@@ -19,8 +19,8 @@ echo "# $1\n" > README.md
 sed "s/set(PROJECT_NAME pi_pico_c_template)/set(PROJECT_NAME $1)/g" CMakeLists.txt > CMakeLists.tmp
 mv CMakeLists.tmp CMakeLists.txt
 
-# Remove this script
-rm prepare.sh
+# Remove this script and the LICENCE.md file
+rm -f prepare.sh LICENCE.md
 
 # Recreate git repo
 git init
